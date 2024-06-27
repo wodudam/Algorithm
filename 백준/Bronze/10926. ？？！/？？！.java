@@ -1,9 +1,16 @@
-import java.util.*;
-public class Main{
-	public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        
-		String a = sc.nextLine();
-		System.out.println(a + "??!");
-	}
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String str = br.readLine();
+        StringTokenizer st = new StringTokenizer(str);
+
+        bw.write(st.nextToken() + "??!");
+        bw.flush();
+        bw.close();
+    }
 }
