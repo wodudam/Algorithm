@@ -1,18 +1,21 @@
-import java.util.*;
-public class Main{
-	public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-        
-        if (a>0 && b>0)
+        int a = Integer.parseInt(br.readLine());
+        int b = Integer.parseInt(br.readLine());
+
+        if (a > 0 && b > 0)
             System.out.println("1");
-        else if (a<0 && b>0)
+        else if (a < 0 && b > 0)
             System.out.println("2");
-        else if (a<0 && b<0)
+        else if (a < 0 && b < 0)
             System.out.println("3");
-        else if (a>0 && b<0)
+        else if (a > 0 && b < 0)
             System.out.println("4");
-	}
+    }
 }
