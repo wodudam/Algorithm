@@ -1,20 +1,23 @@
-import java.util.*;
-public class Main{
-	public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String s = br.readLine();
+        int a = Integer.parseInt(s);
         
-		int a = sc.nextInt();
-    
-        if (90<=a && a<=100)
+        if (a>=90 && a<=100)
             System.out.println("A");
-        else if (80<= a && a <=89)
+        else if (a>=80 && a<90)
             System.out.println("B");
-        else if (70<= a && a <=79)
+        else if (a>=70 && a<80)
             System.out.println("C");
-        else if (60<= a && a <=69)
+        else if (a>=60 && a<70)
             System.out.println("D");
-        else
+        else 
             System.out.println("F");
-    
-	}
+    }
 }
