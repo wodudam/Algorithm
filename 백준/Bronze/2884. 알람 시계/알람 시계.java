@@ -11,21 +11,14 @@ public class Main {
         int h = Integer.parseInt(splits[0]);
         int m = Integer.parseInt(splits[1]);
 
-//        if (m > 45)
-//            System.out.println(h + " " + (m - 45));
-//        else {
-//            if (h > 0)
-//                System.out.println((h - 1) + " " + (m + 15));
-//            else
-//                System.out.println((h + 23) + " " + (m + 15));
-//        }
-        
-        if (m < 45)
-            if (h == 0)
-                System.out.println((h + 23) + " " + (m + 15));
-            else
-                System.out.println((h - 1) + " " + (m + 15));
-        else
+        if (m >= 45)
             System.out.println(h + " " + (m - 45));
+        else {
+            if (h > 0)
+                System.out.println((h - 1) + " " + (m + 15));
+            else
+                System.out.println((h + 23) + " " + (m + 15));
+        }
+        
     }
 }
