@@ -1,38 +1,24 @@
-import java.util.*;
-public class Main {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-		        Scanner sc = new Scanner(System.in);
-		        
-				int a = sc.nextInt();
-				int b = sc.nextInt();
-		        int c = sc.nextInt();
-		         
-        		int i = 0;
-		        if (a==b && b==c) {
-		        	int prize = 10000 + a*1000;
-		        	System.out.println(prize);
-		        } 
-		        else if (a==b || a==c) {
-		        	int prize = 1000 + a*100;
-		        	System.out.println(prize);
-		        }
-		        else if (b==c) {
-		        	int prize = 1000 + b*100;
-		        	System.out.println(prize);
-		        }
-		        else if (a>b && a>c) {
-		        	int prize = a*100;
-		        	System.out.println(prize);
-		        }
-		        else if (b>a && b>c) {
-		        	int prize = b*100;
-		        	System.out.println(prize);
-		        }
-		        else if (c>a && c>b) {
-		        	int prize = c*100;
-		        	System.out.println(prize);
-		        }      	
-	}
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] splits = br.readLine().split(" ");
+
+        int a = Integer.parseInt(splits[0]);
+        int b = Integer.parseInt(splits[1]);
+        int c = Integer.parseInt(splits[2]);
+
+        if (a == b && b == c)
+            System.out.println(10000 + (a * 1000));
+        else if (a == b || a == c)
+            System.out.println(1000 + (a * 100));
+        else if (b == c)
+            System.out.println(1000 + (b * 100));
+        else
+            System.out.println(Math.max(a, Math.max(b, c)) * 100);
+
+    }
 }
