@@ -6,14 +6,20 @@ public class Main {
         BufferedWriter bw = new BufferedWriter((new OutputStreamWriter(System.out)));
         String str;
 
-        while ((str = br.readLine()) != null) {
-            String[] splits = str.split(" ");
-            int a = Integer.parseInt(splits[0]);
-            int b = Integer.parseInt(splits[1]);
-            int sum = a + b;
+        try {
+            while ((str = br.readLine()) != null) {
+                String[] splits = str.split(" ");
+                int a = Integer.parseInt(splits[0]);
+                int b = Integer.parseInt(splits[1]);
+                int sum = a + b;
 
-            bw.write(sum + "\n");
+                bw.write(sum + "\n");
+            }
+            bw.close();
+
+        } catch (IOException e) {
+            throw new IOException();
         }
-        bw.close();
+
     }
 }
