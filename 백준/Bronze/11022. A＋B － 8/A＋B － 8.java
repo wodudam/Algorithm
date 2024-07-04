@@ -13,7 +13,8 @@ public class Main {
             int b = Integer.parseInt(splits[1]);
             int sum = a + b;
 
-            bw.write("Case #" + i + ": " + a + " + " + b + " = " +sum + "\n");
+//            bw.write("Case #" + i + ": " + a + " + " + b + " = " +sum + "\n");
+            bw.write(String.format("Case #%d: %d + %d = %d\n", i, a, b, sum));
         }
         bw.flush();
         bw.close();
