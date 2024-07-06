@@ -15,13 +15,10 @@ public class Main {
 
         st = new StringTokenizer(br.readLine());
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        for (int i : arr) {
-            if (x > i) {
-                bw.write(i + " ");
+            if (arr[i] < x) {
+                bw.write(arr[i] + " ");
             }
         }
 
@@ -29,3 +26,4 @@ public class Main {
         bw.close();
     }
 }
+
