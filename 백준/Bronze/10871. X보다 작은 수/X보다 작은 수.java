@@ -13,17 +13,18 @@ public class Main {
 
         int[] arr = new int[n];
 
-        StringTokenizer st2 = new StringTokenizer(br.readLine());
+        st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(st2.nextToken());
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int j = 0; j < arr.length; j++) {
-            if (x > arr[j]) {
-                bw.write(arr[j] + " ");
+        for (int i : arr) {
+            if (x > i) {
+                bw.write(i + " ");
             }
         }
+
         bw.flush();
         bw.close();
     }
