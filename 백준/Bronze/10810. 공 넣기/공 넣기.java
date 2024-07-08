@@ -19,7 +19,7 @@ public class Main {
             int j = Integer.parseInt(st.nextToken());
             int k = Integer.parseInt(st.nextToken());
 
-            for (int b = i - 1; b <= j - 1; b++) {
+            for (int b = i - 1; b < j; b++) {
                 arr[b] = k;
             }
         }
