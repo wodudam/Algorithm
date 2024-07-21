@@ -6,10 +6,12 @@ public class Main {
 
         int T = Integer.parseInt(br.readLine());
 
-        for (int i = 1; i <= T; i++) {
+        for (int i = 0; i < T; i++) {
             String s = br.readLine();
-            System.out.println(s.charAt(0) +""+ s.charAt(s.length() - 1));
+            System.out.println(s.charAt(0) + "" + s.charAt(s.length() - 1));
         }
+        
+        br.close();
     }
 }
 
