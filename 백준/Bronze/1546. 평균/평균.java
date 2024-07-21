@@ -3,11 +3,11 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine());
-        double[] arr = new double[N];
         String[] splits = br.readLine().split(" ");
+
+        double[] arr = new double[N];
 
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(splits[i]);
@@ -28,11 +28,7 @@ public class Main {
         }
 
         avg = sum / N;
-        bw.write(String.valueOf(avg));
-
-        br.close();
-        bw.flush();
-        bw.close();
+        System.out.println(avg);
     }
 }
 
