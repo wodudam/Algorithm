@@ -8,9 +8,10 @@ public class Main {
 
         for (int i = 0; i < T; i++) {
             String s = br.readLine();
-            System.out.println(s.charAt(0) + "" + s.charAt(s.length() - 1));
+            System.out.print(s.charAt(0));
+            System.out.println(s.charAt(s.length() - 1));
         }
-        
+
         br.close();
     }
 }
