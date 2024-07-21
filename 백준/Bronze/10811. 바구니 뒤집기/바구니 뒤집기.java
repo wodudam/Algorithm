@@ -1,10 +1,9 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String[] splits = br.readLine().split(" ");
         int N = Integer.parseInt(splits[0]);
@@ -18,19 +17,26 @@ public class Main {
 
         for (int j = 0; j < M; j++) {
             splits = br.readLine().split(" ");
-            int I = Integer.parseInt(splits[0]);
-            int J = Integer.parseInt(splits[1]);
+            int a = Integer.parseInt(splits[0]);
+            int b = Integer.parseInt(splits[1]);
 
-            while (I < J) {
-                int tmp = arr[I];
-                arr[I++] = arr[J];
-                arr[J--] = tmp;
+            while (a < b) {
+                int tmp = arr[a];
+                arr[a] = arr[b];
+                arr[b] = tmp;
+                a++;
+                b--;
             }
         }
 
         for (int k = 1; k < arr.length; k++) {
-            System.out.print(arr[k] + " ");
+            bw.write(arr[k] + " ");
         }
+
+        br.close();
+        bw.flush();
+        bw.close();
+
     }
 }
 
