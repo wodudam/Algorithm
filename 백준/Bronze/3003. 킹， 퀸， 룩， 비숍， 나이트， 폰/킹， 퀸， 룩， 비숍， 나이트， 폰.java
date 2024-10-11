@@ -4,18 +4,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
 
         int[] chess = {1, 1, 2, 2, 2, 8};
 
         String[] s = br.readLine().split(" ");
 
         for (int i = 0; i < s.length; i++) {
-            bw.write(chess[i] - Integer.parseInt(s[i]) + " ");
-            bw.flush();
+            sb.append(chess[i] - Integer.parseInt(s[i])).append(" ");
         }
 
-        br.close();
-        bw.close();
+        System.out.println(sb.toString());
     }
 }
