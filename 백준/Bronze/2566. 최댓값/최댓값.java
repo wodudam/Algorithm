@@ -17,11 +17,6 @@ public class Main {
             String[] input = br.readLine().split(" ");
             for (int j = 0; j < COL; j++) {
                 matrix[i][j] = Integer.parseInt(input[j]);
-            }
-        }
-
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COL; j++) {
                 if (max <= matrix[i][j]) {
                     max = matrix[i][j];
                     maxRow = i + 1;
@@ -29,7 +24,7 @@ public class Main {
                 }
             }
         }
-
+        
         bw.write(max + "\n");
         bw.write(maxRow + " " + maxCol);
         bw.flush();
